@@ -1,0 +1,89 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<title>Fingerprint based on ATM System</title>
+<meta name="keywords" content="" />
+<meta name="Premium Series" content="" />
+<link rel="stylesheet" href="{{ url_for('static', filename='default.css') }}">
+<script language="javascript">
+	function validate(formObj) {
+	
+	if(formObj.t2.value.length==0)
+	{
+	alert("Please Enter amount");
+	formObj.t2.focus();
+	return false;
+	}
+	return true;
+	}
+	</script>
+</head>
+<body>
+<!-- start header -->
+<div id="header">
+	<div id="logo">
+		<h1><span><center>Fingerprint based on ATM System
+
+</center></span></h1>
+		
+	</div>
+	<div id="menu">
+		<ul id="main">
+			<li class="current_page_item"><a href="Deposit">Deposit Amount</a></li><td></td>
+			<li><a href="Withdraw">Withdrawl Amount</a></li><td></td>
+			<li><a href="ViewBalance">View Balance</a></li><td></td>
+			<li><a href="Logout">Logout</a></li><td></td>
+			<td></td>
+			
+     
+		</ul>
+		
+	</div>
+	
+</div>
+
+<div id="wrapper">
+	<!-- start page -->
+	<div id="page">
+		 <form name ="frm" method="post" action="/WithdrawAction" onsubmit="return validate(this);">
+		<!-- start content -->
+		<div id="content">
+			<div class="flower"><center><h1>
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			Amount Withdrawl Screen<h1></div>
+			<br/>
+			<div class="msg"><font size="3" color="red"><center>{{ msg }}</center></font></div>
+	
+			<br/>
+		
+		
+			<table align="right">
+
+{{ msg1 | safe }}
+
+<tr><td><font size="3" color="black">Withdraw&nbsp;Amount</td><td><input type="text" name="t2" size="20"/> </td></tr>
+
+<tr><td></td><td><input type="submit" value="Submit"></td>
+</td></tr></table>
+</form>
+			</table>
+			</center><br /><div class="post">
+				
+				<div class="entry">
+					
+				</div>
+			</div>
+		</div>
+		<!-- end content -->
+		<!-- start sidebars -->
+		
+		<!-- end sidebars -->
+		<div style="clear: both;">&nbsp;</div>
+	</div>
+	<!-- end page -->
+</div>
+</body>
+</html>
+
+
